@@ -52,12 +52,25 @@ public class Booking {
 
     public void setNumOfAdults(int numOfAdults){
         this.numOfAdults= numOfAdults;
-    }
-    
-    public void setNumOfChildren(int numOfChildren){
-        this.numOfChildren = numOfChildren;
+        calculateTotalNumberOfGuest();
     }
 
-    
+    public void setNumOfChildren(int numOfChildren){
+        this.numOfChildren = numOfChildren;
+        calculateTotalNumberOfGuest();
+    }
+
+    @Override
+    public String toString() {
+        return "Booking {"+
+        "id=" + id +
+        ", checkInDate=" + checkInDate + 
+        ", checkOutDate=" + checkOutDate + 
+        ", numOfAdults=" + numOfAdults + 
+        ", numOfChildren=" + numOfChildren + 
+        ", totalNumOfGuest=" + totalNumOfGuest + 
+        ", bookingConfimationCode=" + bookingConfimationCode + '\'' +
+        "}";
+    }
 
 }
