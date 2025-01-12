@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.yasithadev.yasithadev.entity.Booking;
 
 import lombok.Data;
 
@@ -17,5 +16,5 @@ public class UserDTO {
     private String name;
     private String phoneNumber;
     private String role;
-    private List<Booking> bookings = new ArrayList<>();
+    private List<BookingDTO> bookings = new ArrayList<>();
 }

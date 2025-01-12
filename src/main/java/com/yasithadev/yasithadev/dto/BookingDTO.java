@@ -3,8 +3,6 @@ package com.yasithadev.yasithadev.dto;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.yasithadev.yasithadev.entity.Room;
-import com.yasithadev.yasithadev.entity.User;
 
 import lombok.Data;
 
@@ -25,8 +23,8 @@ public class BookingDTO {
     
     private String bookingConfimationCode;
 
-    private User user;
+    private UserDTO user;
 
-    private Room room;
+    private RoomDTO room;
 }
 
