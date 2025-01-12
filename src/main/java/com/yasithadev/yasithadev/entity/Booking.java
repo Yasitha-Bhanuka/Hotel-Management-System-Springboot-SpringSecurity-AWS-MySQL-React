@@ -37,7 +37,7 @@ public class Booking {
     
     private int totalNumOfGuest;
     
-    private String bookingConfimationCode;
+    private String bookingConfirmationCode;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
@@ -70,8 +70,25 @@ public class Booking {
         ", numOfAdults=" + numOfAdults + 
         ", numOfChildren=" + numOfChildren + 
         ", totalNumOfGuest=" + totalNumOfGuest + 
-        ", bookingConfimationCode=" + bookingConfimationCode + '\'' +
+        ", bookingConfirmationCode=" + bookingConfirmationCode + '\'' +
         "}";
+    }
+
+    // getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getBookingConfirmationCode() {
+        return bookingConfirmationCode;
+    }
+
+    public void setBookingConfirmationCode(String bookingConfirmationCode) {
+        this.bookingConfirmationCode = bookingConfirmationCode;
     }
 
 }
