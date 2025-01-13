@@ -1,6 +1,8 @@
 package com.yasithadev.yasithadev.utils;
 
 import java.security.SecureRandom;
+import com.yasithadev.yasithadev.dto.UserDTO;
+import com.yasithadev.yasithadev.entity.User;
 
 public class Utils {
     private static final String ALPHANUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -15,4 +17,17 @@ public class Utils {
         }
         return stringBuilder.toString();
     }
+
+    public static UserDTO mapUserEntityToUserDTO(User user) {
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setId(user.getId());
+        userDTO.setName(user.getName());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setPhoneNumber(user.getPhoneNumber());
+        userDTO.setRole(user.getRole());
+        return userDTO;
+    }
+
+    
 }
