@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.yasithadev.yasithadev.dto.LoginRequest;
 import com.yasithadev.yasithadev.dto.Response;
@@ -17,6 +18,7 @@ import com.yasithadev.yasithadev.service.interfac.IUserService;
 import com.yasithadev.yasithadev.utils.JWTUtils;
 import com.yasithadev.yasithadev.utils.Utils;
 
+@Service
 public class UserService implements IUserService {
 
     @Autowired
