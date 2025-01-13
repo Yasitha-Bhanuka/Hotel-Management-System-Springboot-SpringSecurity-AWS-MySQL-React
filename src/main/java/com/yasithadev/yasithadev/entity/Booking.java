@@ -39,6 +39,19 @@ public class Booking {
     
     private String bookingConfirmationCode;
 
+
+    public String getBookingConfirmationCode() {
+
+        return bookingConfirmationCode;
+
+    }
+
+    public void setBookingConfirmationCode(String bookingConfirmationCode) {
+
+        this.bookingConfirmationCode = bookingConfirmationCode;
+
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
@@ -72,23 +85,6 @@ public class Booking {
         ", totalNumOfGuest=" + totalNumOfGuest + 
         ", bookingConfirmationCode=" + bookingConfirmationCode + '\'' +
         "}";
-    }
-
-    // getters and setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getBookingConfirmationCode() {
-        return bookingConfirmationCode;
-    }
-
-    public void setBookingConfirmationCode(String bookingConfirmationCode) {
-        this.bookingConfirmationCode = bookingConfirmationCode;
     }
 
 }
