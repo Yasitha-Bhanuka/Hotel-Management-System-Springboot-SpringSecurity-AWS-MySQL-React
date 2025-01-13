@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.yasithadev.yasithadev.dto.Response;
@@ -18,6 +19,7 @@ import com.yasithadev.yasithadev.service.AwsS3Service;
 import com.yasithadev.yasithadev.service.interfac.IRoomService;
 import com.yasithadev.yasithadev.utils.Utils;
 
+@Service
 public class RoomService implements IRoomService {
     @Autowired
     private RoomRepository roomRepository;

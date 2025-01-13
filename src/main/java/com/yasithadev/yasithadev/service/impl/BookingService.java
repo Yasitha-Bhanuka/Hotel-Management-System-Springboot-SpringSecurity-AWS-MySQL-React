@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import com.yasithadev.yasithadev.dto.BookingDTO;
 import com.yasithadev.yasithadev.dto.Response;
@@ -18,6 +19,7 @@ import com.yasithadev.yasithadev.service.interfac.IBookingService;
 import com.yasithadev.yasithadev.service.interfac.IRoomService;
 import com.yasithadev.yasithadev.utils.Utils;
 
+@Service
 public class BookingService implements IBookingService {
     @Autowired
     private BookingRepository bookingRepository;
