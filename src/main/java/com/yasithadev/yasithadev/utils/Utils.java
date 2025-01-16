@@ -10,6 +10,8 @@ import com.yasithadev.yasithadev.dto.UserDTO;
 import com.yasithadev.yasithadev.entity.Booking;
 import com.yasithadev.yasithadev.entity.Room;
 import com.yasithadev.yasithadev.entity.User;
+import com.yasithadev.yasithadev.dto.EventDTO;
+import com.yasithadev.yasithadev.entity.Event;
 
 public class Utils {
     private static final String ALPHANUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -130,5 +132,23 @@ public class Utils {
         return bookingList.stream().map(Utils::mapBookingEntityToBookingDTO).collect(Collectors.toList());
     }
 
+    public static EventDTO mapEventEntityToEventDTO(Event event) {
+        EventDTO eventDTO = new EventDTO();
 
+        eventDTO.setId(event.getId());
+        eventDTO.setEventName(event.getEventName());
+        eventDTO.setArtistName(event.getArtistName());
+        eventDTO.setEventDateTime(event.getEventDateTime());
+        eventDTO.setLocation(event.getLocation());
+        eventDTO.setDescription(event.getDescription());
+        eventDTO.setEventPhotoUrl(event.getEventPhotoUrl());
+        eventDTO.setPrice(event.getPrice());
+        return eventDTO;
+    }
+
+    public static List<EventDTO> mapEventListEntityToEventListDTO(List<Event> eventList) {
+        return eventList.stream()
+                .map(Utils::mapEventEntityToEventDTO)
+                .collect(Collectors.toList());
+    }
 }
